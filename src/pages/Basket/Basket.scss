@@ -1,0 +1,200 @@
+@import "../mixin";
+@import "../reset";
+@import "../variables";
+
+
+.basket-wrapper {
+    background-color: #E5E5E5;
+    padding-bottom: 170px;
+}
+
+.basket-products {
+    @include flex(column);
+    gap: 2rem;
+
+    @include responsive_lg {
+        width: 70%;
+    }
+}
+
+.basket-productdetail {
+    display: block;
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    gap: 20px;
+    width: 100%;
+
+    @include responsive_lg {
+        @include flex($justify: space-between);
+
+    }
+
+}
+
+.basket-product {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 1rem;
+
+    img {
+        width: 113px;
+        align-self: center;
+    }
+
+    @include responsive_lg {
+        flex-direction: row;
+
+        img {
+            margin: 0 1rem 0 1.5rem;
+            width: 50px;
+        }
+    }
+
+}
+
+.quantity-wrapper {
+    display: block;
+    margin-top: 1rem;
+
+    .quantity {
+        display: flex;
+        gap: 2rem;
+        justify-content: flex-end;
+
+        button {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border: none;
+            font-size: larger;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: larger;
+        }
+    }
+
+    img {
+        width: 18px;
+        height: 20px;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+
+    @include responsive_lg {
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+        @include flex ($justify: space-between);
+        width: 30%;
+
+        img {
+            position: inherit;
+        }
+    }
+
+
+}
+
+.basket-productname {
+    gap: 1rem;
+    @include flex (column, space-around);
+
+    h1 {
+        align-self: center;
+    }
+
+    p {
+        position: absolute;
+        bottom: 1rem;
+    }
+
+    @include responsive_lg {
+        position: inherit;
+    }
+}
+
+.basket-side {
+
+    @include responsive_lg {
+        @include flex($justify: space-between);
+    }
+
+
+}
+
+.total-price {
+        @include flex(column);
+        width: 100%;
+        border-radius: 1rem;
+        background-color: white;
+        padding: 2rem 1.5rem;
+        gap: 1rem;
+margin-top: 20px;
+        h1 {
+            @include font(normal, 600, 1rem, 1.5rem);
+        }
+
+        .border {
+            border-top: 1px solid #828282;
+        }
+
+        p {
+            @include flex($justify: space-between);
+        }
+
+        .total {
+            @include font(normal, 600, 1rem, 1.5rem);
+        }
+    
+        @include responsive_lg{
+            width: 25%;
+        }
+
+}
+
+.sebet {
+    padding: 49px 0 30px;
+}
+
+.empty-basket{
+    border-radius: 8px;
+    background-color: white;
+    padding: 136px 1.5rem 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    p{
+        color:  #BDBDBD;
+        @include font(normal, 500, 1rem, 1.5rem);
+        width: 200px;
+        margin: 40px 0 32px;
+    }
+    button{
+        color: white;
+        background-color: $green1;
+        border-radius: 8px;
+        width: 280px;
+        border: none;
+        padding: 16px 72px;
+        cursor: pointer;
+    }
+    button:hover{
+        color: $green1;
+        background-color: white;
+        border: 1px solid $green1;
+    }
+    @include responsive_lg{
+        padding: 136px 30rem 128px;
+    }
+}

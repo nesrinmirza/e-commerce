@@ -1,0 +1,138 @@
+@import "../mixin";
+@import "../reset";
+@import "../variables";
+
+.footer-wrapper {
+    background-color: #262626;
+    padding: 2.875rem 0 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+
+    @include responsive_lg {
+        flex-direction: row;
+        gap: 8.75rem;
+    }
+}
+
+.footer-logo {
+    @include flex($direction: column, $align: center);
+    gap: 1.20rem;
+
+    //   margin-bottom: 3rem;
+    @include responsive_lg {
+        gap: 1.625rem;
+    }
+}
+
+.logo-name {
+
+    a {
+        display: flex;
+        gap: 1rem;
+    }
+
+    p {
+        @include font(normal, 500, 2.125rem, 2.5rem, $green1);
+
+    }
+}
+
+.logo-icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.item {
+    color: white;
+    @include flex($direction: column, $align: center);
+    margin-bottom: 0.5rem;
+
+    li {
+        margin-bottom: 0.5rem;
+
+        @include responsive_lg {
+            margin-bottom: 1rem;
+        }
+    }
+
+    h3 {
+        @include font(normal, 500, 1.25rem, 1.5rem);
+        margin-bottom: 2rem;
+    }
+
+    a {
+        @include font(normal, 400, 1rem, 1.5rem);
+        opacity: 0.7;
+    }
+
+    .address {
+        display: flex;
+        img {
+            padding-right: 1.25rem;
+        }
+    }
+
+    .phone {
+        display: flex;
+        img {
+            padding-right: 1.25rem;
+        }
+    }
+
+    .email {
+        display: flex;
+        img {
+            padding-right: 1.25rem;
+        }
+    }
+
+    @include responsive_lg {
+        text-align: start;
+        display: block;
+
+    }
+}
+
+
+.footer-copyright {
+    color: white;
+    opacity: 0.7;
+    border-top: 1px solid grey;
+    padding: 1.5rem 0 1.5rem;
+    margin-top: 1.5rem;
+
+    .copyright {
+        display: flex;
+        gap: 0.75rem;
+    }
+}
+
+
+.footer-block {
+
+    display: none;
+
+
+    @include responsive_lg {
+        display: flex;
+        gap: 2.5rem;
+    }
+}
+
+.footer-copy {
+    @include responsive_lg {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.item {
+    li:hover{
+        color: $green1;
+    }
+}

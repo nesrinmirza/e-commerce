@@ -1,0 +1,38 @@
+@mixin buttons ($background: null, $color:null,$border:none,$width: null, $margin:null, $height:null, $radius:null, $fsize:null){
+    background-color: $background;
+    color: $color;
+    border: $border;
+    width: $width;
+    margin: $margin;
+    min-height: $height;
+    border-radius: $radius;
+    font-size: $fsize;
+}
+
+@mixin flex ($direction: null, $justify: null, $align:null){
+    display: flex;
+    flex-direction: $direction;
+    // flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align; }
+
+
+ @mixin font ($fstyle:null, $fweight:null,$fsize:null,$line:null,$color:null,$text:null){
+    font-style: $fstyle;
+    font-weight: $fweight;
+    font-size: $fsize;
+    line-height: $line;
+    color: $color;
+    text-align: $text;
+ }
+
+ @mixin responsive_md{
+    @media (min-width: 768px){
+        @content
+    }
+};
+@mixin responsive_lg{
+    @media (min-width: 992px){
+        @content
+    }
+};

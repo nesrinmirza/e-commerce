@@ -1,0 +1,143 @@
+@import "../mixin";
+@import "../reset";
+@import "../variables";
+
+.signup-login {
+    margin: 4.5rem 1.75rem 5.5rem;
+    color: #4F4F4F;
+    display: flex;
+
+    @include responsive_lg {
+        margin: 6rem 9rem 11rem 13.4rem;
+        gap: 15rem;
+    }
+}
+
+.register-wrapper {
+    width: 100%;
+    @include flex (column, $align: center);
+    gap: 24px;
+
+    h1 {
+        @include font(normal, 500, 1.25rem, 1.75rem);
+    }
+
+    @include responsive_lg {
+        width: 50%;
+
+    }
+}
+
+.form-inputs {
+    @include flex (column);
+    gap: 24px;
+    width: 100%;
+
+    button {
+        background-color: $green1;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        padding: 1rem 6rem;
+    }
+
+    @include responsive_lg {
+        max-width: 320px;
+        width: 100%;
+    }
+
+}
+
+.input-part {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    input {
+        height: 48px;
+        background-color: #F2F2F2;
+        border: none;
+        border-radius: 8px;
+        padding-left: 1rem;
+    }
+
+    @include responsive_lg {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+.social-media {
+    @include flex($align: center);
+    gap: 43px;
+
+    .social-item {
+        @include flex($align: center);
+        gap: 8px;
+    }
+
+    @include responsive_lg {
+        max-width: 300px;
+        width: 100%;
+    }
+}
+
+.google-btn,
+.facebook-btn {
+    @include flex($justify: center, $align: center);
+    border-radius: 50%;
+}
+
+.register-image {
+    display: none;
+
+    @include responsive_lg {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+    }
+}
+
+.show-mob {
+
+    @include responsive_lg {
+        display: none;
+    }
+}
+
+.show-browser {
+    display: none;
+
+    @include responsive_lg {
+        display: block;
+    }
+}
+
+.check {
+    @include flex($direction: column, $align: center);
+    gap: 2rem;
+    margin: 9.375rem 1rem 13.125rem;
+    img {
+        width: 133px;
+        height: 120px;
+    }
+
+    p {
+        @include font(normal, 500, 1rem, 1.8, #4F4F4F, center);
+    }
+
+    @include responsive_lg {
+        margin: 5.5rem 23rem 11rem;
+
+        img {
+            width: 232px;
+            height: 208px;
+        }
+
+        p {
+            @include font(normal, 500, 1.5rem, 2, #4F4F4F, center);
+        }
+    }
+
+}
